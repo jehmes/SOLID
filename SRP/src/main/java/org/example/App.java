@@ -1,32 +1,34 @@
 package org.example;
 
+import java.util.List;
+
 /**
  * Hello world!
  */
 public class App {
     public static void main(String[] args) {
-        Cart carrinho1 = new Cart();
+        Item item1 = new Item("Bicycle", 750.10f);
+        Item item2 = new Item("Refrigerator", 1950.15f);
+        Item item3 = new Item("Carpet", 350.20f);
 
-        carrinho1.addItens("Bicycle", 750.10f);
-        carrinho1.addItens("Refrigerator", 1950.15f);
-        carrinho1.addItens("Carpet", 350.20f);
+        Cart cart = new Cart(List.of(item1, item2, item3));
 
-        System.out.println(carrinho1.showItens());
+        Order order = new Order(cart);
+
+        System.out.println(cart.getItens());
         System.out.println();
-        System.out.println("Amount: " + carrinho1.showAmount());
-
-        System.out.println();
-        System.out.println("Status: " + carrinho1.showStatus());
-
-//        carrinho1.addItens("Television 65", 3570.25f);
+        System.out.println("Amount: " + order.getAmount());
 
         System.out.println();
-        if (carrinho1.confirmOrder()) {
+        System.out.println("Status: " + order.getStatus());
+
+        System.out.println();
+        if (order.confirmOrder()) {
             System.out.println("Order placed successfully!");
         } else {
             System.out.println("Error confirming order. Cart is empty.");
         }
         System.out.println();
-        System.out.println("Status: " + carrinho1.showStatus());
+        System.out.println("Status: " + order.getStatus());
     }
 }

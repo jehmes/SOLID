@@ -6,47 +6,18 @@ import java.util.List;
 import java.util.Map;
 
 public class Cart {
-    private List<Map<String, Object>> itens;
-    private String status;
-    private Float amount;
+    private List<Item> itens;
 
-
-    public Cart() {
-        this.itens = new ArrayList<>();
-        this.status = "open";
-        this.amount = 0F;
+    public Cart(List<Item> items) {
+        this.itens = items;
     }
 
-    public void addItens(String item, Float value) {
-        Map<String, Object> itemMap = new HashMap<>();
-        itemMap.put(item, value);
-        amount += value;
-        itens.add(itemMap);
-    }
-
-    public Float showAmount() {
-        return amount;
-    }
-
-    public String showStatus() {
-        return status;
-    }
-
-    public List<Map<String, Object>> showItens() {
+    public List<Item> getItens() {
         return itens;
     }
 
-    public boolean confirmOrder() {
-        if (validateCart()) {
-            status = "confirmed";
-            sendEmailConfirmation();
-            return true;
-        }
-        return false;
-    }
-
-    public String sendEmailConfirmation() {
-        return "Sending email confirmation . . .";
+    public void addItens(Item item) {
+        itens.add(item);
     }
 
     public boolean validateCart() {
