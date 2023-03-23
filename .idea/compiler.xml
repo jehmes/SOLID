@@ -7,9 +7,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="SRP" />
+        <module name="OCP" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="OCP" target="11" />
       <module name="SRP" target="11" />
     </bytecodeTargetLevel>
   </component>
