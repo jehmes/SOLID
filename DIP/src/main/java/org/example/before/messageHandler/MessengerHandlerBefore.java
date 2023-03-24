@@ -2,7 +2,7 @@ package org.example.before.messageHandler;
 
 import java.lang.reflect.Method;
 
-public class MessengerBefore {
+public class MessengerHandlerBefore {
 
     private String chanel;
 
