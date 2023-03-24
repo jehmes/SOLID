@@ -8,11 +8,13 @@
         <outputRelativeToContentRoot value="true" />
         <module name="SRP" />
         <module name="LSP" />
+        <module name="DIP" />
         <module name="OCP" />
         <module name="ISP" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="DIP" target="11" />
       <module name="ISP" target="11" />
       <module name="LSP" target="11" />
       <module name="OCP" target="11" />
