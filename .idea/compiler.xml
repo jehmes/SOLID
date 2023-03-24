@@ -9,9 +9,11 @@
         <module name="SRP" />
         <module name="LSP" />
         <module name="OCP" />
+        <module name="ISP" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="ISP" target="11" />
       <module name="LSP" target="11" />
       <module name="OCP" target="11" />
       <module name="SRP" target="11" />
