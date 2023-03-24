@@ -1,10 +1,10 @@
-package org.example;
+package org.example.after;
 
 /**
  * Hello world!
  *
  */
-public class App 
+public class AppAfter
 {
     public static void main( String[] args )
     {
